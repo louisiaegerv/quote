@@ -1,0 +1,88 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  background: #fff;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, .3);
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quoteContainer {
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.quoteTxt {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 2rem;
+  transition: font-size .3s;
+}
+
+.author {
+  text-align: right;
+  font-size: 1.2rem;
+  transition: font-size .3s;
+}
+
+.tweet {
+  float: left;
+  padding: 5px;
+}
+
+.newQuote {
+  text-align: right;
+  float: right;
+  padding: 8px 12px;
+}
+
+.newQuote, .tweet {
+  color: #FFF;
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+.newQuote:hover, .tweet:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
+.me {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  color: #FFF;
+  z-index: -1;
+}
+
+.me a {
+  text-decoration: none;
+  color: #FFF;
+  transition: all .3s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.me a:hover {
+  border-bottom: 1px solid #fff;
+  transition: .3s;
+}
+
+@media screen and (max-width: 700px) {
+  .quoteTxt {
+    font-size: 1rem;
+  }
+  .author {
+    font-size: .8rem;
+  }
+}
