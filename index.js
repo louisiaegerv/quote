@@ -96,10 +96,10 @@ $(document).ready(function(){
     function getColor() {
       var randColor = colors[Math.floor(Math.random() * colors.length)];
       console.log("Current color: " + randColor);
-      $("html").css("background-color", randColor);
+      document.body.style.backgroundColor = randColor;
+      document.body.style.color = randColor;
       $(".tweet").css("background-color", randColor);
       $(".newQuote").css("background-color", randColor);
-      $(".app").css("color", randColor);
     }
  
     function getQuote() {
@@ -122,10 +122,7 @@ $(document).ready(function(){
     function tweetIt() {
       var phrase =   $(".quoteTxt").text() + $(".author").text();
       var tweetUrl = 'https://twitter.com/intent/tweet?text=' +
-    encodeURIComponent(phrase) +
-
-    '.' +
-    '&url=' + 'http://codepen.io/yaegz/pen/pRzzbO';
+    encodeURIComponent(phrase) + '.' + '&url=' + 'https://louisiaegerv.github.io/quote';
     
   window.open(tweetUrl);
     }
